@@ -1,7 +1,11 @@
 ##############このファイルの不安点##############################
 
-#v2 nitaisite SEBlock wotekiou
-#Dataset:FashionMnist nanode zisakunomonoworiyousuru
+#v2 に対して SEBlock を適応
+#Dataset:FashionMnist なので自作のデータセットを利用
+
+################################################################
+
+##############パラメータ##########################################
 
 #SEBlock をしようするなら "ON" 不使用なら "OFF"
 SEBlock = "ON"
@@ -13,7 +17,7 @@ epochs = 100
 fig_name = "SEBlock_ResNet50_Cifar100_CrossEntropyLoss.jpg"
 out_dim = 100
 
-#NLLoss:1D
+#NLLoss:1Dの際に利用
 
 ################################################################
 
@@ -331,7 +335,6 @@ if __name__ == "__main__":
         graph_OFF_acc.append(test_acc)
 
         #formatは{0}のようにしなくてもいい
-        #プログレスバーを表示するようにすべき
         print("Epoch: {},Training Cost: {:.3f}, Training Acc: {:.3f}, Valid Cost: {:.3f}, Valid Acc: {:.3f}".format(epoch+1, train_loss, train_acc, test_loss, test_acc))
 
     #plot
