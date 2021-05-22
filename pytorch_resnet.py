@@ -16,6 +16,7 @@ loss_function = nn.CrossEntropyLoss()
 epochs = 100
 fig_name = "SEBlock_ResNet50_Cifar100_CrossEntropyLoss.jpg"
 out_dim = 100
+learning_rate = 0.001
 
 #NLLoss:1Dの際に利用
 
@@ -242,7 +243,7 @@ if __name__ == "__main__":
     
     print("Start learning & evaluate")
     criterion = loss_function
-    optimizer = optimizers.Adam(model.parameters())
+    optimizer = optimizers.Adam(model.parameters(lr=learning_rate))
     
     #Set Table
     fig, (Gloss, Gacc) = plt.subplots(ncols=2, figsize=(10, 4))
@@ -301,7 +302,7 @@ if __name__ == "__main__":
 
     print("Start learning & evaluate")
     criterion = loss_function
-    optimizer = optimizers.Adam(model.parameters())
+    optimizer = optimizers.Adam(model.parameters(lr=learning_rate))
 
     for epoch in range(epochs):
         train_loss = 0.
