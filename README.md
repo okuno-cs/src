@@ -4,12 +4,11 @@
 Pytorchを用いたresnetのコード
 
 ## パラメータ
-*SEBlock:SEブロックを適応するかどうか
-*loss_function:損失関数
-*epochs:epoch
-*fig_name:出力結果のグラフを保存する際の名前
-*out_dim:出力層のチャネル数
-*learning_rate:学習率
+- `learning_rate` 学習率 
+- `SEBlock` SEブロックを適応するかどうか
+- `loss_function` 損失関数
+- `epochs` 学習エポック数
+- `fig_name` 出力結果のグラフを保存する際の名前
 
 
 ## ファイル
